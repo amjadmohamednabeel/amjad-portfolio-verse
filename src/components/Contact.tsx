@@ -129,7 +129,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold">Location</h4>
-                  <p className="text-muted-foreground">Room No-A12 (2nd Floor),Omani Building( Al Serakal Villa),42A Street,Near Hor Al Anz Park.</p>
+                  <p className="text-muted-foreground">Room No-A12 (2nd Floor),Omani Building( Al Serakal Villa),42A Street,Near Hor Al Anz Park,Dubai,UAE</p>
                 </div>
               </div>
               <div className="flex items-start">
