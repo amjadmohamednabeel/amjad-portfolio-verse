@@ -43,6 +43,7 @@ export function Contact() {
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
+        to_email: "amnamjad4@gmail.com", // Setting the recipient email
         subject: formData.subject || "Contact from Portfolio",
         message: formData.message
       };
