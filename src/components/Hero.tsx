@@ -1,6 +1,7 @@
 
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export function Hero() {
   return (
@@ -29,8 +30,15 @@ export function Hero() {
           </div>
           <div className="lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-primary/10 to-primary/30 flex items-center justify-center shadow-lg">
-              <div className="absolute inset-3 rounded-full bg-white flex items-center justify-center">
-                <h2 className="text-3xl sm:text-4xl font-bold text-primary">AM</h2>
+              <div className="absolute inset-3 rounded-full bg-white overflow-hidden border-4 border-white">
+                <Avatar className="w-full h-full">
+                  <AvatarImage 
+                    src="/lovable-uploads/a64b2d99-f281-4be5-addb-2985b92913a9.png" 
+                    alt="Amjad Mohamed" 
+                    className="object-cover w-full h-full"
+                  />
+                  <AvatarFallback className="text-3xl sm:text-4xl font-bold text-primary">AM</AvatarFallback>
+                </Avatar>
               </div>
             </div>
           </div>
