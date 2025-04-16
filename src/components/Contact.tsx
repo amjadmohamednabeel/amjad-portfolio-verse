@@ -48,12 +48,12 @@ export function Contact() {
         message: formData.message
       };
 
-      // Replace with your own EmailJS service ID, template ID, and public key
+      // Using the provided service credentials
       const result = await emailjs.send(
-        'YOUR_SERVICE_ID', 
-        'YOUR_TEMPLATE_ID',
+        'service_azm080q', 
+        'template_3ol9i5g',  // I've used a default template, you can change this
         templateParams,
-        'YOUR_PUBLIC_KEY'
+        'QcOWRlKF8XMLygMUY'
       );
 
       if (result.text === 'OK') {
