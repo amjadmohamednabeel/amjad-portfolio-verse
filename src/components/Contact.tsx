@@ -51,7 +51,7 @@ export function Contact() {
       // Using the provided service credentials
       const result = await emailjs.send(
         'service_azm080q', 
-        'template_3ol9i5g',  // I've used a default template, you can change this
+        'template_vs0vbcq',  // I've used a default template, you can change this
         templateParams,
         'QcOWRlKF8XMLygMUY'
       );
