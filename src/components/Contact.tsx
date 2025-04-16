@@ -48,7 +48,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold">Location</h4>
-                  <p className="text-muted-foreground">Muhaisinah 4, Dubai</p>
+                  <p className="text-muted-foreground">Room No-A12 (2nd Floor),Omani Building( Al Serakal Villa),42A Street,Near Hor Al Anz Park.</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -58,7 +58,7 @@ export function Contact() {
                 <div>
                   <h4 className="text-lg font-semibold">LinkedIn</h4>
                   <a 
-                    href="https://linkedin.com/in/" 
+                    href="https://www.linkedin.com/in/amjad-mohamed-nabeel-j/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-primary transition-colors"
