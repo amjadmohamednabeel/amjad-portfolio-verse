@@ -1,14 +1,9 @@
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { createClient } from "@supabase/supabase-js";
-
-// Initialize Supabase client
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
-const supabase = createClient(supabaseUrl, supabaseKey);
+import emailjs from '@emailjs/browser';
 
 export function Contact() {
   const { toast } = useToast();
@@ -44,35 +39,40 @@ export function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Send to Supabase
-      const { error } = await supabase
-        .from('contact_messages')
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-            created_at: new Date()
-          }
-        ]);
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject || "Contact from Portfolio",
+        message: formData.message
+      };
 
-      if (error) throw error;
+      // Replace with your own EmailJS service ID, template ID, and public key
+      const result = await emailjs.send(
+        'YOUR_SERVICE_ID', 
+        'YOUR_TEMPLATE_ID',
+        templateParams,
+        'YOUR_PUBLIC_KEY'
+      );
 
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
-      });
+      if (result.text === 'OK') {
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
 
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Error sending email:", error);
       toast({
         title: "Something went wrong",
         description: "Unable to send your message. Please try again later.",
@@ -203,10 +203,11 @@ export function Contact() {
               </div>
               <Button 
                 type="submit" 
-                className="w-full" 
+                className="w-full flex items-center justify-center gap-2" 
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
+                {!isSubmitting && <Send className="h-4 w-4" />}
               </Button>
             </form>
           </div>
