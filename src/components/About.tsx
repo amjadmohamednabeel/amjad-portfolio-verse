@@ -30,7 +30,7 @@ export function About() {
                 <MapPin className="mr-3 h-5 w-5 text-primary mt-0.5" />
                 <div>
                   <strong className="block text-sm font-medium">Location:</strong>
-                  <span className="text-muted-foreground">Muhaisinah 4, Dubai</span>
+                  <span className="text-muted-foreground">Room No-A12 (2nd Floor),Omani Building( Al Serakal Villa),42A Street,Near Hor Al Anz Park.</span>
                 </div>
               </li>
               <li className="flex items-start">
