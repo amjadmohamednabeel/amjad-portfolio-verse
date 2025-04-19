@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import { Mail, Phone, MapPin, Linkedin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Send, WhatsApp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
@@ -101,12 +100,26 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold">Phone</h4>
-                  <a 
-                    href="tel:+971505886998" 
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    +971 50 588 6998
-                  </a>
+                  <div className="space-y-2">
+                    <a 
+                      href="https://wa.me/971505886998" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <WhatsApp className="h-4 w-4" />
+                      +971 50 588 6998
+                    </a>
+                    <a 
+                      href="https://wa.me/919094729507" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <WhatsApp className="h-4 w-4" />
+                      +91 90947 29507
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="flex items-start">
