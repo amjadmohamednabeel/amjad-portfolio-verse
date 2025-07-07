@@ -17,25 +17,24 @@ export function Contact() {
         <div className="mt-12 flex flex-col items-center">
           <h3 className="text-xl font-semibold mb-4">Download My Resume</h3>
           <p className="text-muted-foreground mb-6 text-center max-w-2xl">
-            Feel free to download my resume in PDF or Word format for your reference. 
-            Both versions are ATS-friendly and contain detailed information about my skills and experience.
+            Feel free to download my resume in PDF format. It's ATS-friendly and contains 
+            detailed information about my skills and experience as a Mechatronics Engineer.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               variant="default" 
               className="flex items-center gap-2" 
-              onClick={() => window.open('/lovable-uploads/Amjad_Mohamed_Resume.pdf', '_blank')}
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/src/amjad_cv.pdf';
+                link.download = 'Amjad_Mohamed_Resume.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
             >
               <FileText />
               Download CV (PDF)
-            </Button>
-            <Button 
-              variant="outline" 
-              className="flex items-center gap-2"
-              onClick={() => window.open('/lovable-uploads/Amjad_Mohamed_Resume.docx', '_blank')}
-            >
-              <Download />
-              Download CV (Word)
             </Button>
           </div>
         </div>
