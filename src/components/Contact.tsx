@@ -26,7 +26,7 @@ export function Contact() {
               className="flex items-center gap-2" 
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/src/amjadmd_CV.pdf';
+                link.href = '/amjadmd_CV.pdf';
                 link.download = 'Amjad_Mohamed_Resume.pdf';
                 document.body.appendChild(link);
                 link.click();
