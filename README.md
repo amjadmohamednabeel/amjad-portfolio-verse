@@ -36,15 +36,15 @@ npm run dev
 
 ## 🌐 Deployment
 
-Easily deploy your portfolio using [Lovable](https://lovable.dev). Simply click "Publish" in the project dashboard.
+Built and deployed with modern web technologies for optimal performance and scalability.
 
 ## 🔒 Custom Domain
 
-Want a professional touch? Connect a custom domain in Project > Settings > Domains.
+Configured for seamless custom domain integration and professional branding.
 
 ## 📬 Contact
 
-Have questions or suggestions? Reach out to me at [your email].
+Have questions or suggestions? Reach out to me at amnamjad4@gmail.com.
 
 ## 🤝 Contributing
 
