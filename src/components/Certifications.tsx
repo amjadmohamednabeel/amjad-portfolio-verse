@@ -8,7 +8,7 @@ interface Certification {
 
 const certifications: Certification[] = [
   {
-    title: "Artificial Intelligence Masterclass",
+    title: "Machine Learning Masterclass",
     issuer: "Ureka",
   },
   {

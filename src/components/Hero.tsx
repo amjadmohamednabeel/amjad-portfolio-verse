@@ -33,7 +33,7 @@ export function Hero() {
               <div className="absolute inset-3 rounded-full bg-white overflow-hidden border-4 border-white">
                 <Avatar className="w-full h-full">
                   <AvatarImage 
-                    src="/lovable-uploads/a64b2d99-f281-4be5-addb-2985b92913a9.png" 
+                    src="/profile-photo.png" 
                     alt="Amjad Mohamed" 
                     className="object-cover w-full h-full"
                   />
