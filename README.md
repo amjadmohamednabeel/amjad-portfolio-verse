@@ -52,7 +52,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 📝 License
 
-[Specify your license, e.g., MIT]
+© 2024 Amjad Mohamed. All rights reserved.
 
 ---
 
