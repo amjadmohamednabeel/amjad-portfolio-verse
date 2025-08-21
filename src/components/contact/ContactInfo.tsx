@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 
 export function ContactInfo() {
   return (
@@ -71,6 +71,22 @@ export function ContactInfo() {
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               LinkedIn Profile
+            </a>
+          </div>
+        </div>
+        <div className="flex items-start">
+          <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+            <Github className="h-5 w-5 text-primary" />
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold">GitHub</h4>
+            <a 
+              href="https://github.com/amjadmohamednabeel" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              GitHub Profile
             </a>
           </div>
         </div>
